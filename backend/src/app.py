@@ -12,13 +12,13 @@ logging.basicConfig(level=logging.INFO, filename='app.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 current_file_path = Path(__file__).resolve()
-parent_path = current_file_path.parents[1]
+parent_path = current_file_path.parents[2]
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
 
-db_path = parent_path / "data/flood_data.db"
-geojson_path = parent_path / "data/lagos_landuse_cleaned_valid.geojson"
+db_path = parent_path / "data/processed/flood_data.db"
+geojson_path = parent_path / "data/geospatial/lagos_landuse_cleaned_valid.geojson"
 engine = create_engine(f"sqlite:///{db_path}")
 
 @app.route('/api/health')
