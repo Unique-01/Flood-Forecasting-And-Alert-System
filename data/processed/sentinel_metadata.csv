@@ -1,0 +1,98 @@
+image_id,date,region
+COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20250604T053010_20250604T053039_059492_0762AD_E99F,1749015010000,Lagos
+COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20250604T175326_20250604T175351_059500_0762F0_7BBC,1749059606000,Port Harcourt
+COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20250606T173748_20250606T173813_059529_0763F0_8259,1749231468000,Makurdi
+COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20250604T175326_20250604T175351_059500_0762F0_7BBC,1749059606000,Yenagoa
+flood-system
+├── backend
+│   ├── app.log
+│   ├── app.py
+│   ├── data
+│   └── models
+├── check_database.py
+├── check_train_test_schema.py
+├── check_weather_features.py
+├── clean_darthmouth.py
+├── clean_geojson_enhanced.py
+├── clean_geojson.py
+├── correct_lagos_geojson.py
+├── data
+│   ├── bayelsa_landuse_cleaned.geojson
+│   ├── bayelsa_landuse_cleaned_valid.geojson
+│   ├── benue_landuse_cleaned.geojson
+│   ├── benue_landuse_cleaned_valid.geojson
+│   ├── data_stream-oper_stepType-accum.nc
+│   ├── data_stream-oper_stepType-instant.nc
+│   ├── flood_data.db
+│   ├── geonames_ng.txt
+│   ├── gfm_floods.csv
+│   ├── global_flood_monitor.csv
+│   ├── historical_floods.csv
+│   ├── lagos_landuse_cleaned.geojson
+│   ├── lagos_landuse_cleaned_valid.geojson
+│   ├── lagos_landuse_corrected.geojson
+│   ├── nga_adminboundaries_tabulardata.xlsx
+│   ├── nga_ppp_2020_constrained.tif
+│   ├── nigeria_states.geojson
+│   ├── raw_weather.csv
+│   ├── raw_weather_historical.csv
+│   ├── raw_weather_realtime.csv
+│   ├── rivers_landuse_cleaned.geojson
+│   ├── rivers_landuse_cleaned_valid.geojson
+│   ├── sentinel_metadata.csv
+│   ├── test_data.csv
+│   ├── test_data_with_features.csv
+│   ├── train_data.csv
+│   └── train_data_with_features.csv
+├── extract_landuse_features.py
+├── extract_sentinel_features.py
+├── extract_weather_features.py
+├── fetch_era5_weather.py
+├── fetch_historical_weather.py
+├── fetch_realtime_weather.py
+├── fetch_sentinel.py
+├── fetch_weather.py
+├── files_not_needed
+│   ├── bayelsa_landuse.geojson
+│   ├── benue_landuse.geojson
+│   ├── era5_weather.nc
+│   ├── filter_darthmouth_old.py
+│   ├── gfm_floods_old.csv
+│   ├── historical_floods_all.csv
+│   ├── historical_floods_all_mapped.csv
+│   ├── historical_floods_cleaned.csv
+│   ├── historical_floods_debug.csv
+│   ├── historical_floods_raw.csv
+│   ├── lagos_landuse.geojson
+│   ├── process_gfm_old.py
+│   └── rivers_landuse.geojson
+├── filter_darthmouth.py
+├── filter_floods.py
+├── flood-system-frontend
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   └── FloodDashboard.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   └── vite.config.js
+├── geospatial
+├── inspect_historical_flood.py
+├── merge_features.py
+├── merge_floods_data.py
+├── preprocess_data.py
+├── preview_merge_features.py
+├── process_gfm.py
+└── verify_test_train_with_features.py
+
+12 directories, 79 files

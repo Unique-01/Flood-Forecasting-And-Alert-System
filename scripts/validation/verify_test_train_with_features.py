@@ -1,0 +1,10 @@
+import pandas as pd
+train_df = pd.read_csv("data/train_data_with_features.csv")
+test_df = pd.read_csv("data/test_data_with_features.csv")
+print("Train Shape:", train_df.shape)  # Expected: (281, 50)
+print("Test Shape:", test_df.shape)   # Expected: (71, 50)
+print("Train Columns:", train_df.columns.tolist())
+print("Socioeconomic Sample:\n", train_df[["area_residential", "area_farmland"]].head())
+print("Sentinel Sample:\n", train_df[["images_2025-06-02"]].head())
+print("Weather Sample:\n", train_df[["avg_precipitation_7d", "avg_precipitation_30d"]].describe())
+print("Severity:\n",train_df["severity"].value_counts())

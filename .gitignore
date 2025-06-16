@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.log
+
+# Data
+data/raw/*.nc
+data/raw/*.tif
+data/archive/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Models
+backend/models/*.pkl
+backend/models/*.h5
+
+# Misc
+*.DS_Store
+*.swp
